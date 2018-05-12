@@ -19,7 +19,7 @@ print matches
 to=len(matches)
 print to
 for fi in range(1,8):
-	for i in range (to-1,-1,-1):
+	for i in range (to):
 		print i
 		fn=str(matches[i])
 		#fn=str('/home/difx/06/RUP009_20130218_18_CRAB/sched-key4_test/s000'+f+str(i))
