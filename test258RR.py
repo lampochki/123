@@ -18,7 +18,7 @@ for path, dirs, files in os.walk(os.getcwd()):
 print matches
 to=len(matches)
 print to
-for fi in range(8):
+for fi in range(1,8):
 	for i in range (to-1,-1,-1):
 		print i
 		fn=str(matches[i])
@@ -86,13 +86,5 @@ for fi in range(8):
 				head_count+=1
 				current_head+=1
 			all_periods+=accum_periods
-		#np.save(str(i)+'bn'+str(bn)+'fq'+str(fi),data)
+		np.save(str(i)+'bn'+str(bn)+'fq'+str(fi),data)
 		print data
-
-		aver=33
- 		periods=np.shape(data)[0]
- 		data_aver=np.zeros((aver,spec_chan), dtype=np.complex)
- 		for a in range(periods/aver):
-			data_aver[0:aver]+=data[a*aver:(a+1)*aver]
- 		ifft_data=abs(fft.ifft(data_aver,axis=-2))
- 		np.save('aver'+str(i)+'bn'+str(bn)+'fq'+str(fi),ifft_data)
